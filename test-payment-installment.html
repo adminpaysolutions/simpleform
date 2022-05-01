@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Paysolutoins Payment</title>
+</head>
+
+<body>
+    <!-- change action to production url -->
+    <form method="post" action="https://stg-thaiepay.paysolutions.asia/epaylink/payment.aspx">
+        Customer e-mail:
+        <input type="text" name="customeremail" value="customer@email.com">
+        <br> Productdetail:
+        <input type="text" name="productdetail" value="test-installment">
+        <br>
+        <!-- refno unique number 12 digit -->
+        Reference no.:
+        <input type="text" name="refno" value="123456789012">
+        <br>
+        <!-- merchantid 8 digit -->
+        Merchantid :
+        <input type="text" name="merchantid" value="12345678">
+        <br>
+        <!-- currency code -->
+        Currency code :
+        <input type="text" name="cc" value="00">
+        <br> Total :
+        <!-- Minimum installment 3000 THB -->
+        <input type="text" name="total" value="3000">
+        <br> Lang :
+        <input type="text" name="lang" value="TH">
+        <br>
+        <br>
+        <!-- Installment -->
+        <!-- 
+			bankins : monthins
+			KBANK : 3,4,5,6,7,8,9,10
+			BBL : 3,4,5,6,7,8,9,10 *ต้องผ่อนชำระไม่น้อยกว่า 500 บาท ต่อเดือน
+			KTC : 3,4,5,6,7,8,9,10
+			SCB : 3,4,6,10
+			KCC (บัตร กรุงศรี  Visa/Master): 3,4,6 
+			KFC (บัตร เงินสด Fist Choice ): 3,4,6
+			ALL : ทุกธนาคาร
+		    -->
+        <input type="hidden" name="channel" value="installment">
+        <input type="hidden" name="bankins" value="SCB">
+        <input type="hidden" name="monthins" value="3">
+
+
+        <input type="submit" name="Submit" value="Comfirm Order">
+    </form>
+</body>
+
+
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Paysolutoins Payment</title>
+</head>
+
+<body>
+    <form method="post" action="https://stg-thaiepay.paysolutions.asia/epaylink/payment.aspx">
+        Customer e-mail:
+        <input type="text" name="customeremail" value="customer@email.com">
+        <br> Productdetail:
+        <input type="text" name="productdetail" value="test-selet-channel">
+        <br>
+        <!-- refno unique number 12 digit -->
+        Reference no.:
+        <input type="text" name="refno" value="123456789012">
+        <br>
+        <!-- merchantid 8 digit -->
+        Merchantid :
+        <input type="text" name="merchantid" value="12345678">
+        <br>
+        <!-- currency code -->
+        Currency code :
+        <input type="text" name="cc" value="00">
+        <br> Total :
+        <input type="text" name="total" value="1">
+        <br> Lang :
+        <input type="text" name="lang" value="TH">
+        <br>
+        <br>
+        <!--
+            Channel Value 
+            -full (ช่องทาง creditcard จ่ายเต็มจำนวน)
+            -installment (ช่องทางผ่อน)
+            -ibanking (ช่องทาง internet banking)
+            -bill
+            -promptpay
+            -alipay
+            -wechat
+            -truewallet
+            replace in value
+            <input type="hidden" name="channel" value="full" >
+        -->
+        <select name="channel">  
+			    <option value="full"> Full-Payment </option>  
+			    <option value="amex"> Full-Payment American Express </option>  
+			    <option value="cup"> Full-Payment Union Pay </option>  
+			    <option value="installment"> installment </option>  
+			    <option value="bill"> bill </option>  
+			    <option value="promptpay"> promptpay </option>  
+			    <option value="alipay"> alipay </option>  
+			    <option value="wechat"> wechatpay </option> 
+			    <option value="truewallet"> truewallet </option> 
+                <!-- not select specific bank --->
+			    <option value="ibanking"> ibanking </option>  
+                <!-- select specific bank --->
+			    <option value="ibanking_kbank"> ibanking_kbank </option>  
+			    <option value="ibanking_scb"> ibanking_scb </option>  
+			    <option value="ibanking_ktb"> ibanking_ktb </option>  
+			    <option value="ibanking_bay"> ibanking_bay </option>  
+			    <option value="ibanking_bbl"> ibanking_bbl </option>  
+			    <option value="ibanking_ttb"> ibanking_ttb </option> 
+			</select>
+        <input type="submit" name="Submit" value="Comfirm Order">
+    </form>
+</body>
+
+
+</html>
