@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Paysolutoins Payment</title>
+</head>
+
+<body>
+    <form method="post" action="https://www.thaiepay.com/epaylink/payment.aspx">
+        Customer e-mail:
+        <input type="text" name="customeremail" value="customer@email.com">
+        <br> Productdetail:
+        <input type="text" name="productdetail" value="test-postback">
+        <br>
+        <!-- refno unique number 12 digit -->
+        Reference no.:
+        <input type="text" name="refno" value="123456789012">
+        <br>
+        <!-- merchantid 8 digit -->
+        Merchantid :
+        <input type="text" name="merchantid" value="12345678">
+        <br>
+        <!-- currency code -->
+        Currency code :
+        <input type="text" name="cc" value="00">
+        <br> Total :
+        <input type="text" name="total" value="1">
+        <br> Lang :
+        <input type="text" name="lang" value="TH">
+        <br>
+        <br>
+        <!--  For redirect to your site after customer payment complete -->
+        <input type="text" name="returnurl" value="https://www.yourwebsite.com/returnpage.html">
+        <br>
+        <!--  For send webhook <GET> mode  to your site after customer payment complete -->
+        <input type="text" name="postbackurl" value="https://www.yourwebsite.com/api?param1=abcd&param2=34556">
+        <br>
+        <input type="submit" name="Submit" value="Comfirm Order">
+    </form>
+</body>
+
+
+</html>
